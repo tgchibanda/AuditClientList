@@ -1,0 +1,1 @@
+view_notes
