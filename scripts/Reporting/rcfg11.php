@@ -11,8 +11,8 @@ if (EWR_DEBUG_ENABLED) {
 	@ini_set("display_errors", "1"); // Display errors
 	error_reporting(E_ALL ^ E_NOTICE); // Report all errors except E_NOTICE
 }
-define("EWR_PROJECT_ID", "{06DE337B-A50D-4D7A-AB45-E9D5CED3210F}", TRUE); // Project ID
-define("EWR_PROJECT_NAME", "project1", TRUE); // Project Name
+define("EWR_PROJECT_ID", "{2A81346C-7FD8-48B9-8BFA-9FDF9B45A2E9}", TRUE); // Project ID
+define("EWR_PROJECT_NAME", "IRBA_Project", TRUE); // Project Name
 define("EWR_CONFIG_FILE_FOLDER", EWR_PROJECT_NAME . "", TRUE); // Config file folder
 define("EWR_LOWERCASE_OUTPUT_FILE_NAME", FALSE, TRUE); // Lowercase output file name
 define("EWR_IS_WINDOWS", (strtolower(substr(PHP_OS, 0, 3)) === 'win'), TRUE); // Is Windows OS
@@ -21,7 +21,7 @@ if (!EWR_IS_PHP5) die("This script requires PHP 5.4. You are running " . phpvers
 define("EWR_PATH_DELIMITER", ((EWR_IS_WINDOWS) ? "\\" : "/"), TRUE); // Path delimiter
 define("EWR_FONT_NAME", "Verdana", TRUE);
 define("EWR_FONT_SIZE", 14, TRUE);
-$EWR_BODY_CLASS = "hold-transition skin-blue";
+$EWR_BODY_CLASS = "hold-transition skin-yellow";
 $EWR_RESET_HEIGHT = TRUE; // Reset layout height
 
 // Set up font path
@@ -107,10 +107,10 @@ define("EWR_SESSION_KEEP_ALIVE_INTERVAL", 0, TRUE); // Session keep alive interv
 define("EWR_SESSION_TIMEOUT_COUNTDOWN", 60, TRUE); // Session timeout count down interval (seconds)
 
 // General
-$EWR_ROOT_RELATIVE_PATH = "..\..\..\..\..\..\Users\wellington.mbombi.OGH\Documents\PHPReportMaker\WebSites\project1"; // Relative path of app root
+$EWR_ROOT_RELATIVE_PATH = "..\..\..\..\..\Users\Takunda\Documents\PHPReportMaker\WebSites\IRBA Project"; // Relative path of app root
 define("EWR_UNFORMAT_YEAR", 50, TRUE); // Unformat year
-define("EWR_RANDOM_KEY", 'IFvfCxRG2WkgDX8G', TRUE); // Random key for encryption
-define("EWR_PROJECT_STYLESHEET_FILENAME", "phprptcss/project1.css", TRUE); // Project stylesheet file name
+define("EWR_RANDOM_KEY", 'lmOG8eIz03v2VV87', TRUE); // Random key for encryption
+define("EWR_PROJECT_STYLESHEET_FILENAME", "phprptcss/IRBA_Project.css", TRUE); // Project stylesheet file name
 define("EWR_CHART_WIDTH", 600, TRUE);
 define("EWR_CHART_HEIGHT", 500, TRUE);
 define("EWR_CHART_SHOW_BLANK_SERIES", FALSE, TRUE); // Show blank series
@@ -305,9 +305,9 @@ define("EWR_AUTO_HIDE_PAGER", TRUE, TRUE);
 
 // Email
 define("EWR_SMTP_SERVER", "smtp.gmail.com", TRUE); // SMTP server
-define("EWR_SMTP_SERVER_PORT", 587, TRUE); // SMTP server port
+define("EWR_SMTP_SERVER_PORT", 465, TRUE); // SMTP server port
 define("EWR_SMTP_SECURE_OPTION", "ssl", TRUE);
-define("EWR_SMTP_SERVER_USERNAME", "tgchibanda", TRUE); // SMTP server user name
+define("EWR_SMTP_SERVER_USERNAME", "tgchibanda@gmail.com", TRUE); // SMTP server user name
 define("EWR_SMTP_SERVER_PASSWORD", "mnitgc011", TRUE); // SMTP server password
 define("EWR_MAX_EMAIL_RECIPIENT", 3, TRUE);
 define("EWR_MAX_EMAIL_SENT_COUNT", 3, TRUE);

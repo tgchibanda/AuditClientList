@@ -6,7 +6,7 @@ if(($_GET['f']) =="Other"){
   <div class="col-md-12">
        <div class="form-group label-floating">
              <label class="control-label">Other Accounting Framework</label>
-				<input type="text" value="Enter Other Accounting Framework" name="accounting_framework" class="form-control" required />
+				<input type="text" placeholder="Enter Other Accounting Framework" name="accounting_framework" class="form-control" required />
         </div>
  </div>
 </div>

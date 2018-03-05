@@ -1,11 +1,23 @@
-API, edit the url link in script pages with the jquery of the link. eg
-
+API
 
 http://localhost/takunda/nkonki/scripts/slim/api/engagements
 
-on engaged_clients.php
+on 
+
+engaged_clients.php, engaged_clients_data.php, search_name.php, search_client.php, clients_data.php, edit_client.php
+
 
 Change the api db configs
+functions.php
+login-form/index.php
 nkonki\scripts\slim\src\configs
 
 In nkonki folder, edit db connection settings on opendb.php
+
+scripts\Reporting folder
+rcfg11.php line 74
+rdbhelper11.php line 28
+
+
+replace -> header.php
+\Reports\phprptlang english.xml

@@ -1,14 +1,23 @@
-<div class="input-append date" id="datepicker" data-date="02-2012" 
-     data-date-format="mm-yyyy">
+<html lang="en">
+<head>
+    <title>Bootstrap Datepicker with format Example</title>  
+    <link href="bootstrap-datepicker.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>  
+    <script src="bootstrap-datepicker.js"></script>  
+</head>
+<body>
 
- <input  type="text" readonly="readonly" name="date" >    
- <span class="add-on"><i class="icon-th"></i></span>      
-</div>      
-<script>
-$(function(){
-    $("#datepicker").datepicker({
-        viewMode: 'years',
-         format: 'mm-yyyy'
-    });
-});
+
+<input class="date form-control" style="width: 300px;" type="text">
+
+
+<script type="text/javascript">
+    $('.date').datepicker({
+       format: 'yyyy-mm'
+     });
 </script>
+
+
+</body>
+</html>

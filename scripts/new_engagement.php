@@ -131,7 +131,7 @@ button:hover {
 											  </div>
 											  <div class="tab"><h3>Engaged By Details</h3>
 												<label class="control-label pull-left"><h4>Who engaged the client?</h4></label>
-												<select class="form-control" name="engaged_by" id="engaged_by">
+												<select required class="form-control" name="engaged_by" id="engaged_by">
 												<?php
 												$qry = select_all_where("users","access","Auditor");
 												while($info=mysqli_fetch_array($qry)){

@@ -10,41 +10,23 @@ tr  td.edit .noedit {
 }
 </style>
 <div class="card">
-    <div class="card-header" style="background-color :#193F72;">
-        <h4 class="title">Engaged Clients</h4>
-        <p class="category">Update engagement profile</p>
-    </div>
+								<div style="background-color :#193F72; padding:10px;">
+                                    <h4 class="title"><font color="white">Edit Engagements</font></h4>
+                                </div>
     <div class="card-content">
 	
-		<div class="tab-pane" id="engaged">
-                <table class="table">
-					<thead class="text-primary" id="table_rangu">
-						<th>Client Name</th>
-						<th>Registration Number</th>
-						<th>Type Of Engagement</th>
-						<th>Type Of Service</th>
-						<th>Date Engaged</th>
-						<th>Date Resigned</th>
-					</thead>
-						
-					<template id="engagement-data">
-					<tr data-id="{{id}}">
-						<td>{{company_name}}</td>
-						<td>{{company_reg_number}}</td>
-						<td>{{service_type}}</td>
-						<td>{{service_name}}</td>
-						<td>{{engagement_date}}</td>
-						<td class="editDate">
-						<span class="noedit date">{{date_resigned}}</span>
-						<input class="edit date" type="date" /><br>
-						<button class="btn btn-success btn-xs edit saveEdit">Save</button>
-						<button class="btn btn-warning btn-xs edit cancelEdit">Cancel</button>
-						</td>
-					</tr>
-					</template>
 	
-				</table>
-	</div>
+	<div class="row">
+        <div class="col-md-12">
+            <div class="form-group label-floating">
+                <label class="control-label"><font color="green" size="+1"><i class="fa fa-search"></i></font> Search By Client Name</label>
+                <input type="text" name="client_name" id="client_name" onkeyup="searchName(this)" class="form-control">
+            </div>
+        </div>
+    </div>
+										
+										
+		<div id="result"></div>
 </div>
 	
 
@@ -55,71 +37,42 @@ tr  td.edit .noedit {
 <script src = "jquery-3.1.1.js"></script>
 <script src = "mustache.js"></script>
 <script>
-$(function(){
-	
-	var engagementsTemplate = $('#engagement-data').html();
-	
-	
-	$table_rangu = $('#table_rangu');
-	$.ajax({
-		type: 'GET',
-		url : 'http://localhost/takunda/nkonki/scripts/slim/api/engagements',
-		success : function(data){
-			$.each(JSON.parse(data), function(i, engagement){
-				$table_rangu.append(Mustache.render(engagementsTemplate, engagement));
-				});
-		}
-	});
-	
-	$(document).on('click',".editDate",function () {        
-        var $td = $(this).closest('td');
-			$td.find('input.date_resigned').val($td.find('span.date').html());
-			$td.addClass('edit');
-    });
-	
-	$(document).on('click',".cancelEdit",function (e) {
-	var $td = $(this).closest('td');
-	$td.removeClass('edit');
-	e.stopPropagation();	
-    });
-	
-	$(document).on('click',".saveEdit",function (e) {
-	var $tr = $(this).closest('tr');
-	var $td = $(this).closest('td');
-	var $val = $td.find('input.date').val();
-	
-	var newDate = {
-		date_resigned: $td.find('input.date').val()
-	};
-	
-	
-	
-	
-	str = JSON.stringify(newDate);
-	str = JSON.stringify(newDate, null, 4); // (Optional) beautiful indented output.
-	console.log(str); 
+$(document).ready(function(){
+	showEngagements();		
 
-
-
-	 $.ajax({
-		type: 'put',
-		url : 'http://localhost/takunda/nkonki/scripts/slim/api/engagements/update/'+ $tr.attr('data-id'),
-		data: newDate,
-		success : function(data){
-			console.log("Testing: "+JSON.stringify(data));
-			$td.find('span.date').html(newDate.date_resigned);
+function showEngagements(){
+		$.ajax({
+			url: 'engaged_clients_data.php',
+			type: 'POST',
+			async: false,
+			data:{
+				show: 1
 			},
-			error: function(){
-				alert('error updating');
+			success: function(response){
+				$('#result').html(response);
 			}
 		});
+	}
+
+
 	
-	$td.removeClass('edit');
-	e.stopPropagation();
-		
-		
-    });	
-		
-									
-});
+	});
+	
+	function searchName(t) {
+			console.log("text changed");
+			 //onkeyup="changeToUpperCase(this)"
+   var eleVal = document.getElementById(t.id);
+   console.log("The value is: "+ eleVal.value);
+   $.ajax({
+			url: 'search_name.php',
+			type: 'POST',
+			async: false,
+			data:{
+				name: eleVal.value
+			},
+			success: function(response){
+				$('#result').html(response);
+			}
+		});
+}
 </script>

@@ -4,9 +4,17 @@ date_default_timezone_set('Africa/Harare');
 $date = date('m/d/Y h:i:s', time());
 
 
+
 function conn(){
 	$con = mysqli_connect("localhost","root","","nkonki")or die(mysqli_error());
 	return $con;
+}
+
+
+function getLastRecord($table,$field){
+	$qry = mysqli_query(conn(), "select * from $table order by id DESC  limit 1 ");
+	$d = mysqli_fetch_array($qry);
+	return $d[$field];
 }
 
 
@@ -54,6 +62,13 @@ function select_all_where($table,$unique,$value){
 function select_all_data_where($table,$unique,$value){
 	
 	$qry=mysqli_query(conn(), "select * from ".$table." where ".$unique." = '".$value."'")or die(mysqli_error(conn()));
+	
+	return $qry;
+}
+
+function select_all_data_where_and($table,$unique,$value,$unique2,$value2){
+	
+	$qry=mysqli_query(conn(), "select * from ".$table." where ".$unique." = '".$value."' AND ".$unique2." = '".$value2."'")or die(mysqli_error(conn()));
 	
 	return $qry;
 }
@@ -169,7 +184,7 @@ function unique_key(){
 
 
 function audit($action_type, $details){
-	session_start();
+	//session_start();
 	$date = date('m/d/Y h:i:s', time());
 	mysqli_query(conn(),"INSERT INTO audit (date, username, action_type, details) VALUES ('".$date."','".$_SESSION['username']."','$action_type', '$details')")or die(mysqli_error(conn()));
 }

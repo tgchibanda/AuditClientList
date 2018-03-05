@@ -1,4 +1,9 @@
-<style>
+<link href="bootstrap-datepicker.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>  
+    <script src="bootstrap-datepicker.js"></script>
+	
+	<style>
 #font {
 	font-size: 12px;
 }
@@ -10,23 +15,33 @@ include 'functions.php';
 
 
 if(isset($_GET['owner_id'])){
-$qry = select_all_data_where("users","id","$_GET[owner_id]");
+$str = $_GET['owner_id'];
+$data = (explode(" ",$str));
+
+
+$qry = select_all_data_where_and("users","name","$data[0]","surname","$data[1]");
+
 $r =mysqli_fetch_array($qry);
-echo "<input type='text' name='city' id='city' value='".$r['city']."' readonly class='form-control'>";
+
+$qry2 = select_all_data_where("sites","id","$r[city]");
+$r2 =mysqli_fetch_array($qry2);
+echo "<input type='text' name='city' id='city' value='".$r2['site_name']."' readonly class='form-control'><input type='hidden' name='user' id='user' value='".$r['id']."' readonly class='form-control'>";
 }
 
+if(isset($_GET['remove'])){
 
+}
 
 
 if(isset($_GET['more_options'])){
 	
-	if($_GET['more_options']==1){
+	if($_GET['more_options'] < 19 or $_GET['more_options'] == 28){
 	?>
 											<div class="row">
 												<div class="col-md-12">
 												<label class="control-label">First Engagement Financial Year End For Which Assurance Given</label>
 													<div class="form-group label-floating" style="margin:0 0 0 0;">
-														<input class="form-control" type="date" name="first_engagement_date" id="first_engagement_date">
+														<input class="date form-control" type="text" name="first_engagement_date" id="first_engagement_date">
 													</div>
 												</div>
 											</div>
@@ -34,8 +49,8 @@ if(isset($_GET['more_options'])){
 											<div class="row">
 												<div class="col-md-12">
 												<label class="control-label">Select rotation period (Per Quality Control Manual E10.1)</label>
-													<select class="form-control" name="rotation_period" id="rotation_period">
-																<option>Select Option</option>
+													<select required class="form-control" name="rotation_period" id="rotation_period">
+																<option value="" selected="selected">Select Option</option>
 																<option>5</option>
 																<option>7</option>
 													</select>
@@ -53,9 +68,9 @@ if(isset($_GET['more_options'])){
 											<div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
-												<label class="control-label">Anticipated Rotation Partner</label>
-                                                    <select class="form-control" name="anticipated_rotation_partner" id="anticipated_rotation_partner">
-													<option value="0">Please select</option>
+												<label class="control-label">Anticipated Rotation Partner</label><br>
+                                                    <select required class="form-control" name="anticipated_rotation_partner" id="anticipated_rotation_partner">
+													<option value="">Please select</option>
 												<?php
 												$qry = select_all_where("users","access","Auditor");
 												while($info=mysqli_fetch_array($qry)){
@@ -72,8 +87,11 @@ if(isset($_GET['more_options'])){
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Who is the highest level SA parent entity audited by NKONKI</label>
-													<div class="group_structure" id="group_structure">
-													<input type="text" onkeyup="changeToUpperCase(this)" name="group_structure" required class="form-control"></div>
+													<div class="group_structure" id="">
+													
+													<input type="text" name="group_structure" id="group_structure" class="form-control" onkeyup="changeToUpperCase(this)" required/>
+													
+													</div>
                                                 </div>
                                             </div>
                                             </div>
@@ -82,7 +100,7 @@ if(isset($_GET['more_options'])){
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Public Interest Score (PIS)</label>
 													<div class="companies_act" id="companies_act">
-													<input type="number" name="companies_act" required class="form-control"></div>
+													<input type="text" name="companies_act" OnKeypress="javascript:return isNumberKey(event);" required class="form-control"></div>
                                                 </div>
                                             </div>
                                             </div>
@@ -94,7 +112,7 @@ if(isset($_GET['more_options'])){
 											
 											<div class="col-md-8">
 												<div class="custom-control custom-radio custom-control-inline">
-												  <input type="radio" id="irba_code" name="irba_code" value="Yes" class="custom-control-input">
+												  <input type="radio" required id="irba_code" name="irba_code" value="Yes" class="custom-control-input">
 												  <label class="custom-control-label" for="irba_code">Yes</label>
 												  <input type="radio" id="non_assurance" name="irba_code" value="No" class="custom-control-input">
 												  <label class="custom-control-label" for="non_assurance">No</label>
@@ -106,12 +124,12 @@ if(isset($_GET['more_options'])){
 											<div class="row">
 											
                                             <div class="col-md-4">
-											<label class="control-label" id="font">Was an Engagement Quality Control Review (EQCR) performed?</label>
+											<label class="control-label" id="font">Is an Engagement Quality Control Review (EQCR) required, with reference to the Nkonki Quality Control Manual?</label>
                                             </div>
 											
 											<div class="col-md-8">
 												<div class="custom-control custom-radio custom-control-inline">
-												  <input type="radio" id="isqc_1" name="isqc_1" value="Yes" class="custom-control-input">
+												  <input type="radio" required id="isqc_1" name="isqc_1" value="Yes" class="custom-control-input">
 												  <label class="custom-control-label" for="isqc_1">Yes</label>
 												  <input type="radio" id="non_assurance" name="isqc_1" value="No" class="custom-control-input">
 												  <label class="custom-control-label" for="non_assurance">No</label>
@@ -145,19 +163,12 @@ if(isset($_GET['more_options'])){
 											<div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Fee per engagement letter</label>
-													<div class="amount_billed" id="amount_billed">
-													<input type="number" name="amount_billed" required class="form-control"></div>
-                                                </div>
-                                            </div>
-                                            </div>
-											<div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-												<label class="control-label">JSE listed / Subsidiary of listed Company</label>
-                                                    <select class="form-control" name="jse_listed" id="jse_listed">
+												<label class="control-label">Is the entity JSE listed / Subsidiary of listed Company? (JSE listed Select 'L' / Subsidiary of listed company Select 'SL')</label><br>
+                                                    <select required class="form-control" name="jse_listed" id="jse_listed">
+													<option value="">Select Option</option>
 													<option>L</option>
 													<option>SL</option>
+													<option>No</option>
 												</select>
                                                 </div>
                                             </div>
@@ -168,7 +179,7 @@ if(isset($_GET['more_options'])){
 												<div class="col-md-12">
 												<label class="control-label">Year / Period end of AFS</label>
 													<div class="form-group label-floating" style="margin:0 0 0 0;">
-														<input type="date" name="year_of_afs" required class="form-control">
+														<input type="text" name="year_of_afs" required class="date2 form-control">
 													</div>
 												</div>
 											</div>
@@ -201,62 +212,16 @@ if(isset($_GET['more_options'])){
 											<div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Client Turnover for review period</label>
-													<div class="client_turnover" id="client_turnover">
-													<input type="text" name="client_turnover" onkeyup="changeToUpperCase(this)" required class="form-control"></div>
+                                                    <label class="control-label">Estimated Client Turnover for review period</label>
+													<div class="client_turnover" >
+													<input type="text" name="client_turnover" id="client_turnover" onkeyup="changeToUpperCase(this)" required class="form-control"></div>
                                                 </div>
                                             </div>
                                             </div>
+
+
 											
-	<?php
-	}
-	
-	elseif($_GET['more_options']==12 or $_GET['more_options']==13 or $_GET['more_options']==7){
-	?>
-											<div class="col-md-12">
-												<label class="control-label">First Engagement Financial Year End For Which Assurance Given</label>
-													<div class="form-group label-floating" style="margin:0 0 0 0;">
-														<input class="form-control" type="date" name="first_engagement_date" id="first_engagement_date">
-													</div>
-												</div>
-											</div>
 											
-											<div class="row">
-												<div class="col-md-12">
-												<label class="control-label">Select rotation period (Quality Control Manual E10.1)</label>
-													<select class="form-control" name="rotation_period" id="rotation_period">
-																<option>Select Option</option>
-																<option>5</option>
-																<option>7</option>
-													</select>
-												</div>
-											</div>
-											<div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Rotation Year</label>
-													<div class="next_years" id="next_years"><input type="text" value="Rotation years" class="form-control" readonly></div>
-                                                </div>
-                                            </div>
-                                            </div>
-											<div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-												<label class="control-label">Anticipated Rotation Partner</label>
-                                                    <select class="form-control" name="anticipated_rotation_partner" id="anticipated_rotation_partner">
-													<option value="0">Please select</option>
-												<?php
-												$qry = select_all_where("users","access","Auditor");
-												while($info=mysqli_fetch_array($qry)){
-													?>
-														<option><?php echo $info['name']." ".$info['surname']; ?></option>
-												<?php
-												}
-												?>
-												</select>
-                                                </div>
-                                            </div>
-                                            </div>
 	<?php
 	}
 	else{
@@ -265,15 +230,45 @@ if(isset($_GET['more_options'])){
 }
 
 ?>
+<script>
+document.getElementById("first_engagement_date").addEventListener("focusout", myFunction);
+
+function myFunction() {
+    $('#rotation_period option').prop('selected', function() {
+        return this.defaultSelected;
+    });
+	//$('select[name='rotation_period'] option[value=""]').attr('selected', 'selected');
+	//$("select[name='rotation_period'] option[value='5']").attr('selected', 'selected');
+}
+</script>
+
+<script type="text/javascript">
+    $('.date').datepicker({
+       format: 'dd-mm-yyyy',
+	   autoclose:true,
+	   endDate: "today",
+     });
+</script>
+
+<script type="text/javascript">
+    $('.date2').datepicker({
+       format: 'dd-mm'
+     });
+</script>
+
 <script type="text/javascript" src="jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function () {
 	
 	$("#rotation_period").change(function(){
+		var $initial = document.getElementById("first_engagement_date").value;
+
+		console.log("Initial date is: "+$initial);
+
 		var e = document.getElementById ("rotation_period");
 		var years_selected = e.options [e.selectedIndex] .value;
 		console.log(years_selected);
-		$.ajax({url: "return_date.php?days="+years_selected, success: function(result){
+		$.ajax({url: "return_date.php?days="+years_selected+"&initial="+$initial, success: function(result){
             $("#next_years").html("<input type='text' name='rotation_year' id='rotation_year' class='form-control' readonly value='"+result+"'>");
         }});
 	});	
@@ -288,28 +283,8 @@ $("#accounting_framework").change(function(){
         }});
 	});	
 
+	 
+
+
 });	
 	</script>
-
-	<script language="javascript" type="text/javascript">
-function isNumberKey(evt){ // Numbers only
-//OnKeypress="javascript:return isNumberKey(event);"
-    var charCode = (evt.which) ? evt.which : event.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-        return false;
-    return true;
-}
-     function isAlphaNumeric(e){ // Alphanumeric only
-	 //OnKeypress="javascript:return isAlphaNumeric(event,this.value);"
-            var k;
-            document.all ? k=e.keycode : k=e.which;
-            return((k>47 && k<58)||(k>64 && k<91)||(k>96 && k<123)||k==0);
-         }
-
-		 function changeToUpperCase(t) {
-			 //onkeyup="changeToUpperCase(this)"
-   var eleVal = document.getElementById(t.id);
-   eleVal.value= eleVal.value.toUpperCase().replace(/ /g,'');
-}
-
-    </script>

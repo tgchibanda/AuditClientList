@@ -36,6 +36,7 @@ if($_SESSION['username']==""){
 <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="manifest" href="fav/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -48,6 +49,21 @@ if($_SESSION['username']==""){
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="../assets/css/my_styles.css" rel="stylesheet" />
 	
+
+
+
+
+
+ <link href="bootstrap-datepicker.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>  
+    <script src="bootstrap-datepicker.js"></script> 
+
+
+
+
+
+
 	
     <!--  Material Dashboard CSS    -->
     <link href="../assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
@@ -58,6 +74,9 @@ if($_SESSION['username']==""){
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 	
 	
+
+
+
 </head>
 
 <body>
@@ -94,82 +113,47 @@ if($_SESSION['username']==""){
                             <p>New Client</p>
                         </a>
                     </li>
+                    <li>
+                        <a href="index.php?page=edit_client.php">
+                            <i class="material-icons">border_color</i>
+                            <p>Edit Client</p>
+                        </a>
+                    </li>
 					<li>
                         <a href="index.php?page=client_engagement.php">
-                            <i class="material-icons">done</i>
+                            <i class="material-icons">done_all</i>
                             <p>New Engagement</p>
                         </a>
                     </li>
 					<li>
                         <a href="index.php?page=engaged_clients.php">
-                            <i class="material-icons">done_all</i>
-                            <p>Engaged Clients</p>
+                            <i class="material-icons">border_color</i>
+                            <p>Edit Engagements</p>
                         </a>
                     </li>
+                    
+                    
+                    <li>
+                        <a href="index.php?page=resign.php">
+                            <i class="material-icons">computer</i>
+                            <p>Resign Engagement</p>
+                        </a>
+                    </li>
+                 
+
 					<li>
                         <a href="./Reporting" target="_blank">
                             <i class="material-icons">folder_open</i>
-                            <p>Engagement Reports</p>
+                            <p>Reports</p>
                         </a>
                     </li>
 					
-					<?php /* 
-						
-					<li>
-                        <a href="index.php?page=report.php">
-                            <i class="material-icons">home</i>
-                            <p>All Clients</p>
-                        </a>
-                    </li>
 					
-                     <li>                                                                                                                  
-                         <a href="index.php?page=profile.php">                                                                             
-                             <i class="material-icons">person</i>                                                                          
-                             <p>Your Profile</p>                                                                                           
-                         </a>                                                                                                              
-                     </li>                                                                                                                 
-					 	                                                                                                                   
-					 		                                                                                                               
-                     <li class="dropdown">                                                                                                 
-                         <a href="" class="dropdown-toggle" data-toggle="dropdown">                                                        
-                             <i class="material-icons">group</i>                                                                           
-                             <p>System Users</p>                                                                                           
-                         </a>                                                                                                              
-					 	<ul class="dropdown-menu">                                                                                         
-                                     <li>                                                                                                  
-                                         <a href="index.php?page=new_user.php" class="fa fa-user-plus"> New User</a>                       
-					 					<a href="index.php?page=manage_users.php" class="fa fa-list-alt">  Manage Users</a>                
-                                     </li>                                                                                                 
-					 				                                                                                                       
-					 			</ul>                                                                                                      
-                     </li>                                                                                                                 
-					                                                                                                                      */ ?>
-					
-					<li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="material-icons">settings</i>
-                            <p>Configurations</p>
-                        </a>
-						<ul class="dropdown-menu">
-                                    <li>
-										
-                                        <a href="#" class="fa fa-hdd-o"> Database Backup</a>
-										<a href="#" class="fa fa-key"> Change Password</a>
-                                    </li>
-									
-								</ul>
-                    </li>
-                    <li class="active-pro">
-                        <a href="">
-                            <i class="material-icons">unarchive</i>
-                            <p>Upgrade to PRO</p>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
         <div class="main-panel">
-            <nav class="navbar navbar-transparent navbar-absolute">
+            <nav class="navbar navbar-transparent navbar-absolute" style="background-color: white;">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -178,14 +162,14 @@ if($_SESSION['username']==""){
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username']; ?>! </a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             
                             <li class="dropdown">
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-sign-out">sign-out</i>
+                                    <i>Hi <?php echo $_SESSION['username']; ?>!</i>
+                                    <i class="fa fa-user" style="font-size:28px; margin-left: 10px;"></i>
                                     <p class="hidden-lg hidden-md">Profile</p>
                                 </a>
 								<ul class="dropdown-menu">
@@ -200,6 +184,12 @@ if($_SESSION['username']==""){
                     </div>
                 </div>
             </nav>
+
+            <div style="height: 50px;">
+                <img src="1.jpg" width="100%" style="border-bottom: 10px; border-color: '#337ab7'; border-style: solid;" />
+            </div>
+
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -227,11 +217,7 @@ include_once("home.php");
                                     Home
                                 </a>
                             </li>
-                            <li>
-                                <a href="index.php?page=profile.php">
-                                    Profile
-                                </a>
-                            </li>
+                           
                         </ul>
                     </nav>
                     <p class="copyright pull-right">
@@ -246,8 +232,9 @@ include_once("home.php");
         </div>
     </div>
 </body>
+
 <!--   Core JS Files   -->
-<script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
 <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../assets/js/material.min.js" type="text/javascript"></script>
 <!--  Charts Plugin -->

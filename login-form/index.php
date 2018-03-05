@@ -105,7 +105,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 			$_SESSION['username'] = $_POST['username'];
 			?>
 			<script language="">
-				alert("Welcome <?php echo $_SESSION['username']; ?>!")
+				
 				location='../scripts/index.php'
 			</script>
 			<?php

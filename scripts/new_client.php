@@ -25,8 +25,9 @@ error_reporting(0);
 	
 	
 		$result = mysqli_insert_array("clients", $_POST, "submit");
-					mysqli_query(conn(), "update clients set company_child='$data' where company_parents_state='0'")or die(mysqli_error(conn()));
-					mysqli_query(conn(), "update clients set company_parents_state='1' where company_parents_state='0'")or die(mysqli_error(conn()));
+		$last_record = getLastRecord('clients','id');
+					mysqli_query(conn(), "update clients set company_child='$data' where id ='$last_record'")or die(mysqli_error(conn()));
+					mysqli_query(conn(), "update clients set company_parents_state='1' where company_parents_state='0' and id ='$last_record'")or die(mysqli_error(conn()));
 				?>
 				<script>
 					location = 'index.php?page=new_client.php&success';
@@ -37,9 +38,8 @@ error_reporting(0);
 ?>
 <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header" style="background-color :#193F72;">
-                                    <h4 class="title">Register Client</h4>
-                                    <p class="category">Create new profile</p>
+							<div style="background-color :#193F72; padding:10px;">
+                                    <h4 class="title"><font color="white">Create Client</font></h4>
                                 </div>
                                 <div class="card-content">
 								
@@ -63,8 +63,9 @@ error_reporting(0);
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Client Name</label>
-                                                    <input type="text" name="company_name" id="company_name" onkeyup="changeToUpperCase(this)" class="form-control" onkeyup="caps(this)">
+                                                    <label class="control-label">Client Name (Insert the full name of the organization, including "(PTY) LTD", etc)</label>
+                                                    <input type="text" name="company_name" id="company_name" onkeyup="changeToUpperCase(this)" class="form-control" onkeyup="caps(this)" required>
+													<input type="hidden" name="ref" value="<?php echo getLastRecord("clients","id")+1; ?>">
 													<input type="hidden" name="date" onkeyup="changeToUpperCase(this)" id="date" class="form-control" value="<?php echo $date; ?>">
 													<div id="company_name_validation"></div>
                                                 </div>
@@ -81,15 +82,16 @@ error_reporting(0);
                                         </div>
                                         <div class="row">
                                             <div class="col-md-8">
+											<label class="control-label">Relationship Owner</label>
                                                 <div class="form-group label-floating">
-												<label class="control-label">Relationship Owner</label>
-                                                    <select class="form-control" name="relationship_owner" id="relationship_owner">
-													<option value="0">Please select</option>
+												
+                                                    <select required class="form-control" name="relationship_owner" id="relationship_owner">
+													<option value="">Please select</option>
 												<?php
-												$qry = select_all_where("users","access","Auditor");
+												$qry = mysqli_query(conn(), "select * from users where access ='Auditor' and active_status ='1' order by name ASC");
 												while($info=mysqli_fetch_array($qry)){
 													?>
-														<option value=<?php echo $info['id']; ?>><?php echo $info['name']." ".$info['surname']; ?></option>
+														<option><?php echo $info['name']." ".$info['surname']; ?></option>
 												<?php
 												}
 												?>
@@ -98,16 +100,27 @@ error_reporting(0);
                                             </div>
 											
 											<div class="col-md-4">
-                                                    <div id="city_result"></div>
+                                                    <div style="margin-top: 59px;" id="city_result"></div>
 											</div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
+											<label class="control-label">Industry</label>
                                                 <div class="form-group label-floating">
-												<label class="control-label">Industry</label>
-                                                    <select class="form-control" name="industry" id="industry">
+												
+                                                    <select required class="form-control" name="industry" id="industry">
+													<option value="">Please select</option>
 												<?php
-												$qry = select_all_where("industries","active_status","1");
+												
+												$qry = mysqli_query(conn(), "select * from industries where active_status ='1' and name!='Other' order by name ASC");
+												while($info=mysqli_fetch_array($qry)){
+													?>
+														<option><?php echo $info['name']; ?></option>
+												<?php
+												}
+												
+
+												$qry = mysqli_query(conn(), "select * from industries where active_status ='1' and name='Other' order by name ASC");
 												while($info=mysqli_fetch_array($qry)){
 													?>
 														<option><?php echo $info['name']; ?></option>
@@ -121,12 +134,12 @@ error_reporting(0);
 											
 											<div class="row">
 											<div class="col-md-12">
-											<label class="control-label" style="font-size: 14px;">Is the financial information of this entity cpnsolidated/emalgameted into the financial statements of any company
+											<label class="control-label" style="font-size: 14px;">Is the financial information of this entity consolidated / amalgamated / equity accounted into the financial statements of any company
 											 within the group structure?</label>
 												<div class="custom-control custom-radio custom-control-inline">
-												  <input type="radio" id="no_child" name="child_option" checked class="custom-control-input">
+												  <input type="radio" required id="no_child" name="child_option" value="No" checked class="custom-control-input">
 												  <label class="custom-control-label" style="margin-right: 50px;" for="no_child">No</label>
-												  <input type="radio" id="has_child" name="child_option" class="custom-control-input">
+												  <input type="radio" id="has_child" name="child_option" value="Yes" class="custom-control-input">
 												  <label class="custom-control-label" for="has_child">Yes</label>
 												</div>
 											</div>
@@ -138,10 +151,10 @@ error_reporting(0);
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
-												<label class="control-label">How many</label>
+												<label class="control-label">Please state how many?</label>
 													<label id="invalid_option" hidden><font color="red">Select a valid option!</font></label>
-                                                    <select class="form-control" name="parent_number" id="parent_number">
-														<option value="0">Select Option</option>
+                                                    <select required class="form-control" name="parent_number" id="parent_number">
+														<option value="">Select Option</option>
 														<option>1</option>
 														<option>2</option>
 														<option>3</option>
@@ -191,7 +204,7 @@ $(document).ready(function () {
  url: "check_company.php?company_name="+company_name
  }).done(function( data ) {
 	 if(data.length){
-							//disableSubmit();
+							disableSubmit();
 						}
 						else {
 								enableSubmit()
@@ -311,7 +324,7 @@ function isNumberKey(evt){ // Numbers only
 		 function changeToUpperCase(t) {
 			 //onkeyup="changeToUpperCase(this)"
    var eleVal = document.getElementById(t.id);
-   eleVal.value= eleVal.value.toUpperCase().replace(/ /g,'');
+   eleVal.value= eleVal.value.toUpperCase().replace(/ /g,' ');
 }
 
     </script>

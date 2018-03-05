@@ -8,7 +8,7 @@ if (if_exists("clients", "company_name", $_GET['company_name'])<1) {
  //echo "<label>Available</label>";
 }
 else{
- echo "<font color='red'>$_GET[company_name] already in use!</font>";
+ echo "<font color='red'>$_GET[company_name] already in use. Please note, where a client profile has already been created, you should not attempt to create a duplication. Instead, proceed to 'New Engagement'. Consider independants threats.</font>";
 }
 }
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2018/2/1" version="11.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
+<ew-language date="2018/2/27" version="11.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
   <!-- 
 	*** Important Notes:
 	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
@@ -368,47 +368,125 @@
     <phrase id="thisyear" value="This year" />
   </global>
   <project>
-    <phrase id="bodytitle" value="Nkonki Reports" />
+    <phrase id="bodytitle" value="Client List Reports" />
     <phrase id="footertext" value="&amp;copy;2018 e.World Technology Ltd. All rights reserved." />
     <menu id="1">
-      <phrase id="menutext" value="audit" />
+      <phrase id="menutext" value="accounting framework" />
     </menu>
     <menu id="2">
-      <phrase id="menutext" value="clients" />
+      <phrase id="menutext" value="assurance work" />
     </menu>
     <menu id="3">
-      <phrase id="menutext" value="closed projects" />
+      <phrase id="menutext" value="audit" />
     </menu>
     <menu id="4">
-      <phrase id="menutext" value="engagement types" />
+      <phrase id="menutext" value="clients" />
     </menu>
     <menu id="5">
-      <phrase id="menutext" value="engagements" />
+      <phrase id="menutext" value="closed projects" />
     </menu>
     <menu id="6">
-      <phrase id="menutext" value="group companies" />
+      <phrase id="menutext" value="communication" />
     </menu>
     <menu id="7">
-      <phrase id="menutext" value="industries" />
+      <phrase id="menutext" value="company image" />
     </menu>
     <menu id="8">
-      <phrase id="menutext" value="project notes" />
+      <phrase id="menutext" value="compensation" />
     </menu>
     <menu id="9">
-      <phrase id="menutext" value="services" />
+      <phrase id="menutext" value="culture" />
     </menu>
     <menu id="10">
-      <phrase id="menutext" value="system users" />
+      <phrase id="menutext" value="engagement types" />
     </menu>
     <menu id="11">
-      <phrase id="menutext" value="update status notes" />
+      <phrase id="menutext" value="engagements" />
     </menu>
     <menu id="12">
-      <phrase id="menutext" value="users" />
+      <phrase id="menutext" value="group companies" />
     </menu>
     <menu id="13">
-      <phrase id="menutext" value="Engaged Clients" />
+      <phrase id="menutext" value="industries" />
     </menu>
+    <menu id="14">
+      <phrase id="menutext" value="job role" />
+    </menu>
+    <menu id="15">
+      <phrase id="menutext" value="leadership and management" />
+    </menu>
+    <menu id="16">
+      <phrase id="menutext" value="learning and development" />
+    </menu>
+    <menu id="17">
+      <phrase id="menutext" value="performance namagement" />
+    </menu>
+    <menu id="18">
+      <phrase id="menutext" value="project notes" />
+    </menu>
+    <menu id="19">
+      <phrase id="menutext" value="services" />
+    </menu>
+    <menu id="20">
+      <phrase id="menutext" value="sites" />
+    </menu>
+    <menu id="22">
+      <phrase id="menutext" value="test" />
+    </menu>
+    <menu id="23">
+      <phrase id="menutext" value="update status notes" />
+    </menu>
+    <menu id="24">
+      <phrase id="menutext" value="uploads" />
+    </menu>
+    <menu id="25">
+      <phrase id="menutext" value="users" />
+    </menu>
+    <menu id="26">
+      <phrase id="menutext" value="work environment" />
+    </menu>
+    <menu id="27">
+      <phrase id="menutext" value="IRBA Report" />
+    </menu>
+    <menu id="31">
+      <phrase id="menutext" value="IRBA Report" />
+    </menu>
+    <menu id="32">
+      <phrase id="menutext" value="assurance" />
+    </menu>
+    <menu id="33">
+      <phrase id="menutext" value="IRBA Report 2" />
+    </menu>
+    <menu id="34">
+      <phrase id="menutext" value="all clients" />
+    </menu>
+    <menu id="35">
+      <phrase id="menutext" value="Our Clients" />
+    </menu>
+    <table id="accounting_framework">
+      <phrase id="tblcaption" value="accounting framework" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="name">
+        <phrase id="fldcaption" value="name" />
+      </field>
+      <field id="active_status">
+        <phrase id="fldcaption" value="active status" />
+      </field>
+    </table>
+    <table id="assurance_work">
+      <phrase id="tblcaption" value="assurance work" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="name">
+        <phrase id="fldcaption" value="name" />
+      </field>
+      <field id="active_status">
+        <phrase id="fldcaption" value="active status" />
+      </field>
+    </table>
     <table id="audit">
       <phrase id="tblcaption" value="audit" />
       <field id="id">
@@ -459,9 +537,6 @@
       <field id="engagement_status">
         <phrase id="fldcaption" value="engagement status" />
       </field>
-      <field id="city">
-        <phrase id="fldcaption" value="city" />
-      </field>
       <field id="child_option">
         <phrase id="fldcaption" value="child option" />
       </field>
@@ -473,6 +548,12 @@
       </field>
       <field id="company_parents_state">
         <phrase id="fldcaption" value="company parents state" />
+      </field>
+      <field id="ref">
+        <phrase id="fldcaption" value="ref" />
+      </field>
+      <field id="city">
+        <phrase id="fldcaption" value="city" />
       </field>
     </table>
     <table id="closed_projects">
@@ -512,6 +593,141 @@
       </field>
       <field id="track">
         <phrase id="fldcaption" value="track" />
+      </field>
+    </table>
+    <table id="communication">
+      <phrase id="tblcaption" value="communication" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
+      </field>
+      <field id="_5">
+        <phrase id="fldcaption" value="5" />
+      </field>
+      <field id="_6">
+        <phrase id="fldcaption" value="6" />
+      </field>
+      <field id="_7">
+        <phrase id="fldcaption" value="7" />
+      </field>
+      <field id="_8">
+        <phrase id="fldcaption" value="8" />
+      </field>
+    </table>
+    <table id="company_image">
+      <phrase id="tblcaption" value="company image" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
+      </field>
+      <field id="_5">
+        <phrase id="fldcaption" value="5" />
+      </field>
+      <field id="_6">
+        <phrase id="fldcaption" value="6" />
+      </field>
+      <field id="_7">
+        <phrase id="fldcaption" value="7" />
+      </field>
+      <field id="_8">
+        <phrase id="fldcaption" value="8" />
+      </field>
+      <field id="_9">
+        <phrase id="fldcaption" value="9" />
+      </field>
+      <field id="_10">
+        <phrase id="fldcaption" value="10" />
+      </field>
+      <field id="_11">
+        <phrase id="fldcaption" value="11" />
+      </field>
+    </table>
+    <table id="compensation">
+      <phrase id="tblcaption" value="compensation" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
+      </field>
+    </table>
+    <table id="culture">
+      <phrase id="tblcaption" value="culture" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
+      </field>
+      <field id="_5">
+        <phrase id="fldcaption" value="5" />
+      </field>
+      <field id="_6">
+        <phrase id="fldcaption" value="6" />
       </field>
     </table>
     <table id="engagement_types">
@@ -615,6 +831,15 @@
       <field id="first_engagement_date">
         <phrase id="fldcaption" value="first engagement date" />
       </field>
+      <field id="assurance_work">
+        <phrase id="fldcaption" value="assurance work" />
+      </field>
+      <field id="risk">
+        <phrase id="fldcaption" value="risk" />
+      </field>
+      <field id="audit_required">
+        <phrase id="fldcaption" value="audit required" />
+      </field>
     </table>
     <table id="group_companies">
       <phrase id="tblcaption" value="group companies" />
@@ -644,6 +869,153 @@
       </field>
       <field id="active_status">
         <phrase id="fldcaption" value="active status" />
+      </field>
+    </table>
+    <table id="job_role">
+      <phrase id="tblcaption" value="job role" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
+      </field>
+      <field id="_5">
+        <phrase id="fldcaption" value="5" />
+      </field>
+      <field id="_6">
+        <phrase id="fldcaption" value="6" />
+      </field>
+    </table>
+    <table id="leadership_and_management">
+      <phrase id="tblcaption" value="leadership and management" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
+      </field>
+      <field id="_5">
+        <phrase id="fldcaption" value="5" />
+      </field>
+      <field id="_6">
+        <phrase id="fldcaption" value="6" />
+      </field>
+      <field id="_7">
+        <phrase id="fldcaption" value="7" />
+      </field>
+      <field id="_8">
+        <phrase id="fldcaption" value="8" />
+      </field>
+      <field id="_9">
+        <phrase id="fldcaption" value="9" />
+      </field>
+      <field id="_10">
+        <phrase id="fldcaption" value="10" />
+      </field>
+      <field id="_11">
+        <phrase id="fldcaption" value="11" />
+      </field>
+      <field id="_12">
+        <phrase id="fldcaption" value="12" />
+      </field>
+      <field id="_13">
+        <phrase id="fldcaption" value="13" />
+      </field>
+      <field id="_14">
+        <phrase id="fldcaption" value="14" />
+      </field>
+      <field id="_15">
+        <phrase id="fldcaption" value="15" />
+      </field>
+    </table>
+    <table id="learning_and_development">
+      <phrase id="tblcaption" value="learning and development" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
+      </field>
+      <field id="_5">
+        <phrase id="fldcaption" value="5" />
+      </field>
+      <field id="_6">
+        <phrase id="fldcaption" value="6" />
+      </field>
+      <field id="name">
+        <phrase id="fldcaption" value="name" />
+      </field>
+      <field id="division">
+        <phrase id="fldcaption" value="division" />
+      </field>
+    </table>
+    <table id="performance_namagement">
+      <phrase id="tblcaption" value="performance namagement" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
+      </field>
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
+      </field>
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
+      </field>
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
+      </field>
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
       </field>
     </table>
     <table id="project_notes">
@@ -688,34 +1060,67 @@
         <phrase id="fldcaption" value="type" />
       </field>
     </table>
-    <table id="system_users">
-      <phrase id="tblcaption" value="system users" />
-      <field id="name">
-        <phrase id="fldcaption" value="Name" />
+    <table id="sites">
+      <phrase id="tblcaption" value="sites" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
       </field>
-      <field id="surname">
-        <phrase id="fldcaption" value="Surname" />
+      <field id="site_name">
+        <phrase id="fldcaption" value="site name" />
       </field>
-      <field id="username">
-        <phrase id="fldcaption" value="Username" />
+      <field id="active_status">
+        <phrase id="fldcaption" value="active status" />
       </field>
-      <field id="_email">
-        <phrase id="fldcaption" value="Email" />
+    </table>
+    <table id="test">
+      <phrase id="tblcaption" value="test" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
       </field>
-      <field id="address">
-        <phrase id="fldcaption" value="Address" />
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
+      </field>
+      <field id="company_name">
+        <phrase id="fldcaption" value="company name" />
+      </field>
+      <field id="company_reg_number">
+        <phrase id="fldcaption" value="company reg number" />
+      </field>
+      <field id="industry">
+        <phrase id="fldcaption" value="industry" />
+      </field>
+      <field id="company_child">
+        <phrase id="fldcaption" value="company child" />
+      </field>
+      <field id="relationship_owner">
+        <phrase id="fldcaption" value="relationship owner" />
+      </field>
+      <field id="active_status">
+        <phrase id="fldcaption" value="active status" />
+      </field>
+      <field id="engagement_stage">
+        <phrase id="fldcaption" value="engagement stage" />
+      </field>
+      <field id="engagement_status">
+        <phrase id="fldcaption" value="engagement status" />
+      </field>
+      <field id="child_option">
+        <phrase id="fldcaption" value="child option" />
+      </field>
+      <field id="parent_number">
+        <phrase id="fldcaption" value="parent number" />
+      </field>
+      <field id="child_reg_number">
+        <phrase id="fldcaption" value="child reg number" />
+      </field>
+      <field id="company_parents_state">
+        <phrase id="fldcaption" value="company parents state" />
+      </field>
+      <field id="ref">
+        <phrase id="fldcaption" value="ref" />
       </field>
       <field id="city">
-        <phrase id="fldcaption" value="City" />
-      </field>
-      <field id="country">
-        <phrase id="fldcaption" value="Country" />
-      </field>
-      <field id="contact">
-        <phrase id="fldcaption" value="Contact" />
-      </field>
-      <field id="access">
-        <phrase id="fldcaption" value="Access" />
+        <phrase id="fldcaption" value="city" />
       </field>
     </table>
     <table id="update_status_notes">
@@ -740,6 +1145,24 @@
       </field>
       <field id="project_status">
         <phrase id="fldcaption" value="project status" />
+      </field>
+    </table>
+    <table id="uploads">
+      <phrase id="tblcaption" value="uploads" />
+      <field id="a">
+        <phrase id="fldcaption" value="a" />
+      </field>
+      <field id="b">
+        <phrase id="fldcaption" value="b" />
+      </field>
+      <field id="c">
+        <phrase id="fldcaption" value="c" />
+      </field>
+      <field id="d">
+        <phrase id="fldcaption" value="d" />
+      </field>
+      <field id="e">
+        <phrase id="fldcaption" value="e" />
       </field>
     </table>
     <table id="users">
@@ -789,80 +1212,245 @@
       <field id="irba">
         <phrase id="fldcaption" value="irba" />
       </field>
+      <field id="date_qualified">
+        <phrase id="fldcaption" value="date qualified" />
+      </field>
+      <field id="date_of_first_registration_with_irba">
+        <phrase id="fldcaption" value="date of first registration with irba" />
+      </field>
     </table>
-    <table id="engaged_clients">
-      <phrase id="tblcaption" value="Engaged Clients" />
-      <field id="company_name">
-        <phrase id="fldcaption" value="Company Name" />
+    <table id="work_environment">
+      <phrase id="tblcaption" value="work environment" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
       </field>
-      <field id="company_reg_number">
-        <phrase id="fldcaption" value="Registration Number" />
+      <field id="session">
+        <phrase id="fldcaption" value="session" />
       </field>
-      <field id="date_resigned">
-        <phrase id="fldcaption" value="Date Resigned" />
+      <field id="date">
+        <phrase id="fldcaption" value="date" />
       </field>
-      <field id="engagement_date">
-        <phrase id="fldcaption" value="Engagement Date" />
+      <field id="_1">
+        <phrase id="fldcaption" value="1" />
       </field>
-      <field id="service_name">
-        <phrase id="fldcaption" value="Service Name" />
+      <field id="_2">
+        <phrase id="fldcaption" value="2" />
       </field>
-      <field id="service_type">
-        <phrase id="fldcaption" value="Service Type" />
+      <field id="_3">
+        <phrase id="fldcaption" value="3" />
       </field>
-      <field id="first_engagement_date">
-        <phrase id="fldcaption" value="First Engagement Date" />
+      <field id="_4">
+        <phrase id="fldcaption" value="4" />
       </field>
-      <field id="client_turnover">
-        <phrase id="fldcaption" value="Client Turnover" />
+      <field id="_5">
+        <phrase id="fldcaption" value="5" />
       </field>
-      <field id="accounting_framework">
-        <phrase id="fldcaption" value="Accounting Framework" />
+      <field id="_6">
+        <phrase id="fldcaption" value="6" />
       </field>
-      <field id="when_next_irba">
-        <phrase id="fldcaption" value="Next IRBA" />
+      <field id="_7">
+        <phrase id="fldcaption" value="7" />
       </field>
-      <field id="year_of_afs">
-        <phrase id="fldcaption" value="Years Of AFS" />
+      <field id="_8">
+        <phrase id="fldcaption" value="8" />
       </field>
-      <field id="jse_listed">
-        <phrase id="fldcaption" value="JSE LISTED" />
+    </table>
+    <table id="irba">
+      <phrase id="tblcaption" value="IRBA Report" />
+      <field id="no">
+        <phrase id="fldcaption" value="No" />
       </field>
-      <field id="amount_billed">
-        <phrase id="fldcaption" value="Amount Billed" />
+      <field id="client_name">
+        <phrase id="fldcaption" value="Client Name" />
       </field>
-      <field id="isqc_2">
-        <phrase id="fldcaption" value="ISQC" />
+      <field id="audit_fee">
+        <phrase id="fldcaption" value="Audit Fee" />
       </field>
-      <field id="isqc_1">
-        <phrase id="fldcaption" value="ISQC" />
+      <field id="period_end_of_afs">
+        <phrase id="fldcaption" value="Period end of AFS (Month &amp; Year)" />
       </field>
-      <field id="irba_code">
-        <phrase id="fldcaption" value="IRBA Code" />
+      <field id="date_opinion_was_signed">
+        <phrase id="fldcaption" value="Date Opinion was signed" />
       </field>
-      <field id="companies_act">
-        <phrase id="fldcaption" value="Companies Act" />
+      <field id="pi_score">
+        <phrase id="fldcaption" value="PI Score" />
       </field>
-      <field id="group_structure">
-        <phrase id="fldcaption" value="Group Structure" />
+      <field id="partner">
+        <phrase id="fldcaption" value="Partner" />
       </field>
-      <field id="anticipated_rotation_partner">
-        <phrase id="fldcaption" value="Anticipated Rotation Partner" />
-      </field>
-      <field id="rotation_year">
-        <phrase id="fldcaption" value="Rotation Year" />
-      </field>
-      <field id="rotation_period">
-        <phrase id="fldcaption" value="Rotation Period" />
+      <field id="risk">
+        <phrase id="fldcaption" value="Risk" />
       </field>
       <field id="city">
         <phrase id="fldcaption" value="City" />
       </field>
-      <field id="engagement_id">
-        <phrase id="fldcaption" value="Engagement Id" />
+    </table>
+    <table id="irba_report">
+      <phrase id="tblcaption" value="IRBA Report" />
+      <field id="no">
+        <phrase id="fldcaption" value="No" />
       </field>
-      <field id="start_notes">
-        <phrase id="fldcaption" value="Brief Description" />
+      <field id="client_name">
+        <phrase id="fldcaption" value="Client Name" />
+      </field>
+      <field id="audit_fee">
+        <phrase id="fldcaption" value="Audit Fee" />
+      </field>
+      <field id="period_end_of_afs">
+        <phrase id="fldcaption" value="Period end of AFS (Month &amp; Year)" />
+      </field>
+      <field id="date_opinion_was_signed">
+        <phrase id="fldcaption" value="Date Opinion was signed" />
+      </field>
+      <field id="pi_score">
+        <phrase id="fldcaption" value="PI Score" />
+      </field>
+      <field id="partner">
+        <phrase id="fldcaption" value="Partner" />
+      </field>
+      <field id="risk">
+        <phrase id="fldcaption" value="Risk" />
+      </field>
+      <field id="city">
+        <phrase id="fldcaption" value="City" />
+      </field>
+    </table>
+    <table id="assurance">
+      <phrase id="tblcaption" value="assurance" />
+      <field id="client_name">
+        <phrase id="fldcaption" value="Client Name" />
+      </field>
+      <field id="group_structure">
+        <phrase id="fldcaption" value="Group Structure" />
+      </field>
+      <field id="client_cipc">
+        <phrase id="fldcaption" value="Client CIPC" />
+      </field>
+      <field id="companies_act">
+        <phrase id="fldcaption" value="Companies Act" />
+      </field>
+      <field id="irba_code">
+        <phrase id="fldcaption" value="IRBA Code" />
+      </field>
+      <field id="isqc_1">
+        <phrase id="fldcaption" value="ISQC 1" />
+      </field>
+      <field id="isqc_2">
+        <phrase id="fldcaption" value="ISQC 1" />
+      </field>
+      <field id="assurance_work">
+        <phrase id="fldcaption" value="Assurance Work" />
+      </field>
+      <field id="amount_billed">
+        <phrase id="fldcaption" value="Amount Billed" />
+      </field>
+      <field id="jse_listed">
+        <phrase id="fldcaption" value="JSE listed" />
+      </field>
+      <field id="industry">
+        <phrase id="fldcaption" value="Industry" />
+      </field>
+      <field id="period_end_of_afs">
+        <phrase id="fldcaption" value="Year end of AFS" />
+      </field>
+      <field id="date_opinion_was_signed">
+        <phrase id="fldcaption" value="Date audit was signed" />
+      </field>
+      <field id="partner">
+        <phrase id="fldcaption" value="Auditor Name" />
+      </field>
+      <field id="next_irba">
+        <phrase id="fldcaption" value="Next IRBA review" />
+      </field>
+      <field id="accounting_framework">
+        <phrase id="fldcaption" value="Accounting Framework" />
+      </field>
+      <field id="client_turnover">
+        <phrase id="fldcaption" value="Client Turnover" />
+      </field>
+    </table>
+    <table id="irba_2">
+      <phrase id="tblcaption" value="IRBA Report 2" />
+      <field id="client_name">
+        <phrase id="fldcaption" value="Client Name" />
+      </field>
+      <field id="group_structure">
+        <phrase id="fldcaption" value="Group Structure" />
+      </field>
+      <field id="client_cipc">
+        <phrase id="fldcaption" value="Client CIPC" />
+      </field>
+      <field id="companies_act">
+        <phrase id="fldcaption" value="Companies Act" />
+      </field>
+      <field id="irba_code">
+        <phrase id="fldcaption" value="IRBA Code" />
+      </field>
+      <field id="isqc_1">
+        <phrase id="fldcaption" value="ISQC 1" />
+      </field>
+      <field id="isqc_2">
+        <phrase id="fldcaption" value="ISQC 1" />
+      </field>
+      <field id="assurance_work">
+        <phrase id="fldcaption" value="Assurance Work" />
+      </field>
+      <field id="amount_billed">
+        <phrase id="fldcaption" value="Amount Billed" />
+      </field>
+      <field id="jse_listed">
+        <phrase id="fldcaption" value="JSE listed" />
+      </field>
+      <field id="industry">
+        <phrase id="fldcaption" value="Industry" />
+      </field>
+      <field id="period_end_of_afs">
+        <phrase id="fldcaption" value="Year end of AFS" />
+      </field>
+      <field id="date_opinion_was_signed">
+        <phrase id="fldcaption" value="Date audit was signed" />
+      </field>
+      <field id="partner">
+        <phrase id="fldcaption" value="Auditor Name" />
+      </field>
+      <field id="next_irba">
+        <phrase id="fldcaption" value="Next IRBA review" />
+      </field>
+      <field id="accounting_framework">
+        <phrase id="fldcaption" value="Accounting Framework" />
+      </field>
+      <field id="client_turnover">
+        <phrase id="fldcaption" value="Client Turnover" />
+      </field>
+    </table>
+    <table id="all_clients">
+      <phrase id="tblcaption" value="all clients" />
+      <field id="company_name">
+        <phrase id="fldcaption" value="Client Name" />
+      </field>
+      <field id="relationship_owner">
+        <phrase id="fldcaption" value="Relationship Owner" />
+      </field>
+      <field id="ref">
+        <phrase id="fldcaption" value="Ref" />
+      </field>
+      <field id="city">
+        <phrase id="fldcaption" value="City" />
+      </field>
+    </table>
+    <table id="our_clients">
+      <phrase id="tblcaption" value="Our Clients" />
+      <field id="company_name">
+        <phrase id="fldcaption" value="Client Name" />
+      </field>
+      <field id="relationship_owner">
+        <phrase id="fldcaption" value="Relationship Owner" />
+      </field>
+      <field id="ref">
+        <phrase id="fldcaption" value="Ref" />
+      </field>
+      <field id="city">
+        <phrase id="fldcaption" value="City" />
       </field>
     </table>
   </project>
