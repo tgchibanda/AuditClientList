@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-03-01 15:05:29
+Date: 2018-03-12 16:23:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -74,7 +74,7 @@ CREATE TABLE `audit` (
   `action_type` varchar(255) DEFAULT NULL,
   `details` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of audit
@@ -134,6 +134,7 @@ INSERT INTO `audit` VALUES ('52', '03/01/2018 12:10:39', 'admin', 'Engagement ed
 INSERT INTO `audit` VALUES ('53', '03/01/2018 12:17:43', 'admin', 'Engagement edit', 'Edited 456');
 INSERT INTO `audit` VALUES ('54', '03/01/2018 12:18:37', 'admin', 'Engagement edit', 'Edited 456');
 INSERT INTO `audit` VALUES ('55', '03/01/2018 01:34:41', 'admin', 'Engagement edit', 'Edited 456');
+INSERT INTO `audit` VALUES ('56', '03/02/2018 09:29:38', 'admin', 'Loggin', 'Systems Login');
 
 -- ----------------------------
 -- Table structure for `audit_required`
@@ -1443,167 +1444,11 @@ CREATE TABLE `test` (
   `ref` varchar(255) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=769 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of test
 -- ----------------------------
-INSERT INTO `test` VALUES ('1', null, 'Acajou (Pty) Ltd', 'Acajou (Pty) Ltd', null, null, 'Mungofa B.', '1', '0', '1', null, null, null, '0', 'SNH_l_011', 'Johannesburg');
-INSERT INTO `test` VALUES ('388', null, 'Accredited Investments (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('389', null, 'Advanced Terminations and Joints (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('390', null, 'Africabio NPC', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('391', null, 'African World Heritage Fund', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('392', null, 'Agence Francaise De Developpment Project Preparation and Feasibility Studies', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('393', null, 'Agulhas Wetlands', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('394', null, 'ALBERANTE-RANDHART STEERING COMMITTEE (SECT 21)', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('395', null, 'ALBERTON TUISTE VIR BEJAARDES', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('396', null, 'ALBERTON TUISTE VIR BEJAARDES (ASSOCIATION INC UNDER SECTION 21)', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('397', null, 'Albou Trust', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('398', null, 'Albou Trust', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('399', null, 'Alchemist House (Pty) Ltd T/A Fleet Connect', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('400', null, 'AL-CLAD INTERIOR SYSTEMS (PTY) LTD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('401', null, 'Altamonte Investments (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('402', null, 'Amada Asset Management (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('403', null, 'Anglo Inyosi Coal Community Development Trust', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('404', null, 'Apparel Industries (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('405', null, 'Aquarella Investments 224 (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('406', null, 'Araf Industries (Pty) Ltd 2016', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('407', null, 'Araf Industries (Pty) Ltd 2017', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('408', null, 'Argon Securities', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('409', null, 'Asmall & Sons (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('410', null, 'Attacq Group ESD (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('411', null, 'Auditor General Work- contracted out- Umgeni water', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('412', null, 'Autumn Star Trading 100 (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('413', null, 'Basadi Ba Kopane Investment (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('414', null, 'BEAUFORT WEST MUSEUM', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('415', null, 'Bekker Prokureurs', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('416', null, 'BELHAR ISLAMIC PRIMARY SCHOOL', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('417', null, 'BESSEMER AFRICA (PTY) LTD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('418', null, 'BESSEMER BELANGE (PTY) LTD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('419', null, 'Biarritz Investments (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('420', null, 'Bizhub Highveld Lions', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('421', null, 'Blue Shirt Bakery (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('422', null, 'BODY CORPORATE HILLBROW COMMUNITY CENTRE', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('423', null, 'BODY CORPORATE THE BALINESE', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('424', null, 'BOLAND CRICKET BOARD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('425', null, 'Borbartia (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('426', null, 'BREDASDORP MUSEUM', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('427', null, 'CARBONADO ENERGY (PTY) LTD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('428', null, 'Casa Luigi Properties (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('429', null, 'Casa Mia Body Corporate', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('430', null, 'Centaur De Roodepoort ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('431', null, 'Centaur Mining South Africa ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('432', null, 'CENTRAL AFRICAN ROAD SERVICES (PTY) LTD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('433', null, 'Central Cricket Franchise (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('434', null, 'CENTRAL GAUTENG GYMNASTICS ASSOCIATION', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('435', null, 'CHAFEKER & SHABODIEN INC', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('436', null, 'CHRISTELIKE MAATSKAPLIKE RAAD ALBERTON', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('437', null, 'CHRISTELIKE MAATSKAPLIKE RAAD STANDERTON', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('438', null, 'Cilbar and Company', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('439', null, 'COMMERCIAL MINING WEARPARTS (PTY) LTD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('440', null, 'Cricket South Africa', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('441', null, 'C-Track SA (Pty) Limited', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('442', null, 'Darnall Motor Transport (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('443', null, 'DE VRIES INCORPORATED', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('444', null, 'Dealernet (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('445', null, 'Dealfin (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('446', null, 'Debbie Pillay Attorneys', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('447', null, 'Desert Star Trading 109 (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('448', null, 'Development Bank of South Africa', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('449', null, 'DIE CHRISTELIKE MAATSKAPLIKE RAAD RING VAN HEIDELBERG', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('450', null, 'DigiCore Electronics (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('451', null, 'DigiCore Financial Services (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('452', null, 'DigiCore Fleet Management SA (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('453', null, 'Digicore Holdings Limited', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('454', null, 'DigiCore Management Services (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('455', null, 'DigiCore Properties (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('456', null, 'Dr Alberts, Bouwer & Jordaan Incorporated', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('457', null, 'DRIES VAN DER WALT FINANSIELE DIENSTE', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('458', null, 'Drs Thomson Brittain and Partners', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('459', null, 'Drs Thomson Brittain and Partners', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('460', null, 'Dusty Moon Investments 43 (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('461', null, 'Dusty Moon Investments 43 (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('462', null, 'Eastern Cricket', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('463', null, 'Easy Vortex Financial Wellness (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('464', null, 'EC- WFtC- Addo National Park - Woody Section (15/18)', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('465', null, 'EKHAYA NEIGHBURHOOD CITY IMPROVEMENT DISTRICT (SECT 21)', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('466', null, 'Environmental Monitors 2016 / 19', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('467', null, 'Etana Holdings', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('468', null, 'F.H. Ali - Business account', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('469', null, 'F.H. Ali - Estate Agent Trust Account - dormant', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('470', null, 'Factodex (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('471', null, 'Fashion Fusion Distribution (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('472', null, 'Fashion Fusion Traders (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('473', null, 'Firebush Investments (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('474', null, 'Firewood Investments (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('475', null, 'Fivaz Incorporated', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('476', null, 'FONTAINEBLEAU GEMEENSKAPSKERK', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('477', null, 'Free State Cricket NPC', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('478', null, 'Freedom Stationery (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('479', null, 'Friedshelf 1571 (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('480', null, 'GALAXY JUWELERS (PTY) LTD', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('481', null, 'GANGEN ATTORNEYS', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('482', null, 'Gauteng Cricket Board', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('483', null, 'Gayatri Cans (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('484', null, 'Gayatri Cans (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('485', null, 'Gayatri Paper Mill (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('486', null, 'Gayatri Paper Mill (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('487', null, 'Gayatri Paper Mill Gauteng (Pty) Ltd  ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('488', null, 'Gayatri Paper Mill Gauteng (Pty) Ltd  ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('489', null, 'Golden Era Printers & Stationers Bops (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('490', null, 'Golden Era Printers & Stationers Bops (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('491', null, 'Golden Gate Higlands National Park  Working for Wetlands', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('492', null, 'Greene Consulting Engineers (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('493', null, 'Griqua Diamonds (Pty) Ltd t/a Northern Cape Cricket (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('494', null, 'Ground Lily Investments (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('495', null, 'Haupt Earle & Vennote Attorneys', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('496', null, 'Hazsons Holdings Shareblock (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('497', null, 'Hiconnex (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('498', null, 'Hiconnex Communications (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('499', null, 'Hiconnex Industrials (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('500', null, 'Highgrowth Investments (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('501', null, 'Hollard Behold (Cresta Properties) (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('502', null, 'Hollard Business Associates (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('503', null, 'Hollard Dealer Partners (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('504', null, 'Hollard Investment Managers (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('505', null, 'Hollard Life Properties (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('506', null, 'Hollard Portfolio (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('507', null, 'HUGUENOT MEMORIAL MUSEUM', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('508', null, 'Hussun Goga & Company Attorney', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('509', null, 'Ice Blue Clothing (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('510', null, 'Independent Power Producer office', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('511', null, 'Industrial Parks Revitalisation Programme (DTI)', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('512', null, 'Integrated Fare Collection Services (Pty) Ltd ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('513', null, 'Intekom', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('514', null, 'Irfan Trading', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('515', null, 'Islamic Guidance Trust ', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('516', null, 'Izingwe Aberdare Cables (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('517', null, 'Izingwe Cable Investments (Pty) Ltd', null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('518', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('519', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('520', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('521', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('522', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('523', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('524', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('525', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('526', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('527', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('528', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('529', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('530', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('531', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('532', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('533', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('534', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('535', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('536', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('537', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('538', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('539', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('540', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('541', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
-INSERT INTO `test` VALUES ('542', null, null, null, null, null, null, '1', '0', '0', null, null, null, '0', null, null);
 
 -- ----------------------------
 -- Table structure for `update_status_notes`
@@ -1667,23 +1512,23 @@ CREATE TABLE `users` (
   `date_qualified` varchar(255) DEFAULT NULL,
   `date_of_first_registration_with_irba` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '03/01/2018', 'Takunda', 'Chibanda', 'admin', 'admin', 'tgchibanda@gmail.com', 'Nkonki', '1', 'South Africa', '712563214', 'Administrator', 'CA(SA)', '1', '00', null, '00');
-INSERT INTO `users` VALUES ('2', '04/01/2018', 'Mitesh', 'Patel', 'mitesh', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '721225415', 'Auditor', 'CA(SA)', '1', '841161', null, '22/01/2003');
-INSERT INTO `users` VALUES ('24', '08/01/2018', 'Thuto', 'Masasa', 'thuto', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '506223', null, '26/11/2012');
-INSERT INTO `users` VALUES ('26', '04/01/2018', 'Steven', 'Firer', 'steven', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '175463', null, '26/04/1989');
-INSERT INTO `users` VALUES ('27', '04/01/2018', 'Emma', 'Mashilwane', 'emma', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '883883', null, '20/04/2012');
-INSERT INTO `users` VALUES ('28', '04/01/2018', 'Brian', 'Mungofa', 'brian', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '502029', null, '11/03/2009');
-INSERT INTO `users` VALUES ('29', '04/01/2018', 'Nyarai', 'Muzarewetu', 'nyarai', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '507141', null, '01/04/2009');
-INSERT INTO `users` VALUES ('30', '04/01/2018', 'Sangeeta', 'Kallen', 'sangeeta', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '503514', null, '28/01/2009');
-INSERT INTO `users` VALUES ('31', '04/01/2018', 'Kiran', 'Bhika', 'kiran', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '803669', null, '30/09/2013');
-INSERT INTO `users` VALUES ('32', '04/01/2018', 'Ahmed', 'Pandor', 'ahmed', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '786837', null, '30/09/2013');
-INSERT INTO `users` VALUES ('33', '04/01/2018', 'Yongama', 'Madolo', 'yongama', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '736547', null, '07/6/2016');
-INSERT INTO `users` VALUES ('34', '04/01/2018', 'Ghitesh', 'Deva', 'ghitesh', 'password', 'admin@nkonki.com', 'Nkonki', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '797634', null, '03/02/2016');
+INSERT INTO `users` VALUES ('1', '03/01/2018', 'Takunda', 'Chibanda', 'admin', 'admin', 'tgchibanda@gmail.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563214', 'Administrator', 'CA(SA)', '1', '00', null, '00');
+INSERT INTO `users` VALUES ('2', '04/01/2018', 'Mitesh', 'Patel', 'mitesh', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '721225415', 'Auditor', 'CA(SA)', '1', '841161', null, '22/01/2003');
+INSERT INTO `users` VALUES ('24', '08/01/2018', 'Thuto', 'Masasa', 'thuto', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '506223', null, '26/11/2012');
+INSERT INTO `users` VALUES ('26', '04/01/2018', 'Steven', 'Firer', 'steven', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '175463', null, '26/04/1989');
+INSERT INTO `users` VALUES ('27', '04/01/2018', 'Emma', 'Mashilwane', 'emma', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '883883', null, '20/04/2012');
+INSERT INTO `users` VALUES ('28', '04/01/2018', 'Brian', 'Mungofa', 'brian', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '502029', null, '11/03/2009');
+INSERT INTO `users` VALUES ('29', '04/01/2018', 'Nyarai', 'Muzarewetu', 'nyarai', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '507141', null, '01/04/2009');
+INSERT INTO `users` VALUES ('30', '04/01/2018', 'Sangeeta', 'Kallen', 'sangeeta', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '503514', null, '28/01/2009');
+INSERT INTO `users` VALUES ('31', '04/01/2018', 'Kiran', 'Bhika', 'kiran', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '803669', null, '30/09/2013');
+INSERT INTO `users` VALUES ('32', '04/01/2018', 'Ahmed', 'Pandor', 'ahmed', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '786837', null, '30/09/2013');
+INSERT INTO `users` VALUES ('33', '04/01/2018', 'Yongama', 'Madolo', 'yongama', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '736547', null, '07/6/2016');
+INSERT INTO `users` VALUES ('34', '04/01/2018', 'Ghitesh', 'Deva', 'ghitesh', 'password', 'admin@c1client_cpstechnologies_co_za.com', 'c1client_cpstechnologies_co_za', '1', 'South Africa', '712563215', 'Auditor', 'CA(SA)', '1', '797634', null, '03/02/2016');
 INSERT INTO `users` VALUES ('35', null, 'Mungofa', 'B.', null, null, null, null, '1', null, null, 'Auditor', null, '0', 'N/A', null, null);
 INSERT INTO `users` VALUES ('36', null, 'Kallen', 'S.', null, null, null, null, null, null, null, 'Auditor', null, '0', 'N/A', null, null);
 INSERT INTO `users` VALUES ('37', null, 'Muzarewetu', 'N.', null, null, null, null, null, null, null, 'Auditor', null, '0', 'N/A', null, null);
@@ -1704,6 +1549,30 @@ INSERT INTO `users` VALUES ('51', null, 'R.', 'Timol', null, null, null, null, n
 INSERT INTO `users` VALUES ('52', null, 'J.', 'Jamal', null, null, null, null, null, null, null, 'Auditor', null, '0', 'N/A', null, null);
 INSERT INTO `users` VALUES ('53', null, 'Julia', 'van Wyk', null, null, null, null, null, null, null, 'Auditor', null, '0', 'N/A', null, null);
 INSERT INTO `users` VALUES ('56', null, 'N/', 'A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', null, null, null, '1', 'N/A', null, null);
+INSERT INTO `users` VALUES ('57', null, 'Julia', 'van Wyk', null, null, null, null, '9', null, null, null, null, '1', '387193', null, null);
+INSERT INTO `users` VALUES ('58', null, 'Jacques', 'van Wyk', null, null, null, null, '9', null, null, null, null, '1', '0', null, null);
+INSERT INTO `users` VALUES ('59', null, 'Farouk', 'Haffejee', null, null, null, null, '2', null, null, null, null, '1', '303263', null, null);
+INSERT INTO `users` VALUES ('60', null, 'Hussun', 'Omar', null, null, null, null, '2', null, null, null, null, '1', '624152', null, null);
+INSERT INTO `users` VALUES ('61', null, 'Junaid', 'Jamal', null, null, null, null, '2', null, null, null, null, '1', '350817', null, null);
+INSERT INTO `users` VALUES ('62', null, 'Mahommed', 'Motala', null, null, null, null, '2', null, null, null, null, '1', '381586', null, null);
+INSERT INTO `users` VALUES ('63', null, 'Mohamed', 'Haffejee', null, null, null, null, '2', null, null, null, null, '1', '303931', null, null);
+INSERT INTO `users` VALUES ('64', null, 'Razia', 'Timol', null, null, null, null, '2', null, null, null, null, '1', '855286', null, null);
+INSERT INTO `users` VALUES ('65', null, 'Yusuf', 'Paruk', null, null, null, null, '2', null, null, null, null, '1', '646032', null, null);
+INSERT INTO `users` VALUES ('66', null, 'Amaanullah', 'Ayub', null, null, null, null, '8', null, null, null, null, '1', '702544', null, null);
+INSERT INTO `users` VALUES ('67', null, 'Abdul Qadir', 'Khatieb', null, null, null, null, '8', null, null, null, null, '1', '616583', null, null);
+INSERT INTO `users` VALUES ('68', null, 'RODNEY PAUL', 'GOLDES', null, null, null, null, '4', null, null, null, null, '1', '222434', null, null);
+INSERT INTO `users` VALUES ('69', null, 'EESA', 'KARA', null, null, null, null, '4', null, null, null, null, '1', '492302', null, null);
+INSERT INTO `users` VALUES ('70', null, 'HELGA', 'LOTTER', null, null, null, null, '4', null, null, null, null, '1', '881349', null, null);
+INSERT INTO `users` VALUES ('71', null, 'THULISILE NJAPA', 'MASHANDA', null, null, null, null, '4', null, null, null, null, '1', '472611', null, null);
+INSERT INTO `users` VALUES ('72', null, 'JOHANNA THERON', 'MOLLER', null, null, null, null, '4', null, null, null, null, '1', '502034', null, null);
+INSERT INTO `users` VALUES ('73', null, 'HEINRICH PIETER', 'MOLLER', null, null, null, null, '4', null, null, null, null, '1', '794821', null, null);
+INSERT INTO `users` VALUES ('74', null, 'Farouk', 'Haffejee', null, null, null, null, '3', null, null, null, null, '1', '303263', null, null);
+INSERT INTO `users` VALUES ('75', null, 'Hussun', 'Omar', null, null, null, null, '3', null, null, null, null, '1', '624152', null, null);
+INSERT INTO `users` VALUES ('76', null, 'Junaid', 'Jamal', null, null, null, null, '3', null, null, null, null, '1', '350817', null, null);
+INSERT INTO `users` VALUES ('77', null, 'Mahommed', 'Motala', null, null, null, null, '3', null, null, null, null, '1', '381586', null, null);
+INSERT INTO `users` VALUES ('78', null, 'Mohamed', 'Haffejee', null, null, null, null, '3', null, null, null, null, '1', '303931', null, null);
+INSERT INTO `users` VALUES ('79', null, 'Razia', 'Timol', null, null, null, null, '3', null, null, null, null, '1', '855286', null, null);
+INSERT INTO `users` VALUES ('80', null, 'Yusuf', 'Paruk', null, null, null, null, '3', null, null, null, null, '1', '646032', null, null);
 
 -- ----------------------------
 -- Table structure for `work_environment`
@@ -1739,10 +1608,22 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- View structure for `assurance`
 -- ----------------------------
 DROP VIEW IF EXISTS `assurance`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `assurance` AS select `clients`.`company_name` AS `Client_Name`,`engagements`.`group_structure` AS `Group_Structure`,`clients`.`company_reg_number` AS `Client_CIPC`,`engagements`.`companies_act` AS `Companies_Act`,`engagements`.`irba_code` AS `IRBA_Code`,`engagements`.`isqc_1` AS `ISQC_1`,`engagements`.`isqc_2` AS `ISQC_2`,`engagements`.`assurance_work` AS `Assurance_Work`,`engagements`.`amount_billed` AS `Amount_Billed`,`engagements`.`jse_listed` AS `JSE_Listed`,`clients`.`industry` AS `Industry`,`engagements`.`year_of_afs` AS `Period_end_of_AFS`,`engagements`.`date_resigned` AS `Date_Opinion_was_signed`,`clients`.`relationship_owner` AS `Partner`,`engagements`.`when_next_irba` AS `Next_IRBA`,`engagements`.`accounting_framework` AS `Accounting_Framework`,`engagements`.`client_turnover` AS `Client_Turnover` from (`clients` join `engagements`) where ((`clients`.`ref` = `engagements`.`client`) and (`clients`.`engagement_status` = _latin1'1') and (`clients`.`active_status` = _latin1'1'));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `assurance` AS select `clients`.`company_name` AS `Client_Name`,`engagements`.`group_structure` AS `Group_Structure`,`clients`.`company_reg_number` AS `Client_CIPC`,`engagements`.`companies_act` AS `Companies_Act`,`engagements`.`irba_code` AS `IRBA_Code`,`engagements`.`isqc_1` AS `ISQC_1`,`engagements`.`isqc_2` AS `ISQC_2`,`engagements`.`assurance_work` AS `Assurance_Work`,`engagements`.`amount_billed` AS `Amount_Billed`,`engagements`.`jse_listed` AS `JSE_Listed`,`clients`.`industry` AS `Industry`,`engagements`.`year_of_afs` AS `Period_end_of_AFS`,`engagements`.`date_resigned` AS `Date_Opinion_was_signed`,`clients`.`relationship_owner` AS `Partner`,`users`.`irba` AS `IRBA`,`engagements`.`when_next_irba` AS `Next_IRBA`,`engagements`.`accounting_framework` AS `Accounting_Framework`,`engagements`.`client_turnover` AS `Client_Turnover` from ((`clients` join `engagements`) join `users`) where ((`clients`.`ref` = `engagements`.`client`) and (`engagements`.`user` = `users`.`id`) and (`clients`.`engagement_status` = _latin1'1') and (`clients`.`active_status` = _latin1'1'));
+
+-- ----------------------------
+-- View structure for `engagement details`
+-- ----------------------------
+DROP VIEW IF EXISTS `engagement details`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `engagement details` AS select `clients`.`company_name` AS `Client_Name`,`engagements`.`group_structure` AS `Group_Structure`,`clients`.`company_reg_number` AS `Client_CIPC`,`engagements`.`companies_act` AS `Companies_Act`,`engagements`.`irba_code` AS `IRBA_Code`,`engagements`.`isqc_1` AS `ISQC_1`,`engagements`.`isqc_2` AS `ISQC_2`,`engagements`.`assurance_work` AS `Assurance_Work`,`engagements`.`amount_billed` AS `Amount_Billed`,`engagements`.`jse_listed` AS `JSE_Listed`,`clients`.`industry` AS `Industry`,`engagements`.`year_of_afs` AS `Period_end_of_AFS`,`engagements`.`date_resigned` AS `Date_Opinion_was_signed`,`clients`.`relationship_owner` AS `Partner`,`users`.`irba` AS `irba`,`engagements`.`when_next_irba` AS `Next_IRBA`,`engagements`.`accounting_framework` AS `Accounting_Framework`,`engagements`.`client_turnover` AS `Client_Turnover`,`engagements`.`engagement_date` AS `engagement_date`,`services`.`name` AS `name`,`services`.`type` AS `type`,`engagements`.`start_notes` AS `start_notes`,`engagements`.`rotation_year` AS `rotation_year`,`engagements`.`rotation_period` AS `rotation_period`,`engagements`.`anticipated_rotation_partner` AS `anticipated_rotation_partner`,`engagements`.`first_engagement_date` AS `first_engagement_date` from ((`clients` join (`engagements` join `services` on((`engagements`.`engagement_type` = `services`.`id`)))) join `users`) where ((`clients`.`ref` = `engagements`.`client`) and (`engagements`.`user` = `users`.`id`) and (`clients`.`engagement_status` = _latin1'1') and (`clients`.`active_status` = _latin1'1'));
 
 -- ----------------------------
 -- View structure for `irba`
 -- ----------------------------
 DROP VIEW IF EXISTS `irba`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `irba` AS select `clients`.`ref` AS `No`,`clients`.`company_name` AS `Client_Name`,`engagements`.`amount_billed` AS `Audit_Fee`,`engagements`.`year_of_afs` AS `Period_end_of_AFS`,`engagements`.`date_resigned` AS `Date_Opinion_was_signed`,`engagements`.`companies_act` AS `PI_Score`,`clients`.`relationship_owner` AS `Partner`,`engagements`.`risk` AS `Risk`,`clients`.`city` AS `City` from (`clients` join `engagements`) where ((`clients`.`ref` = `engagements`.`client`) and (`clients`.`engagement_status` = _latin1'1') and (`clients`.`active_status` = _latin1'1'));
+
+-- ----------------------------
+-- View structure for `search_irba`
+-- ----------------------------
+DROP VIEW IF EXISTS `search_irba`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `search_irba` AS select `clients`.`company_name` AS `Client_Name`,`engagements`.`group_structure` AS `Group_Structure`,`clients`.`company_reg_number` AS `Client_CIPC`,`engagements`.`companies_act` AS `Companies_Act`,`engagements`.`irba_code` AS `IRBA_Code`,`engagements`.`isqc_1` AS `ISQC_1`,`engagements`.`isqc_2` AS `ISQC_2`,`engagements`.`assurance_work` AS `Assurance_Work`,`engagements`.`amount_billed` AS `Amount_Billed`,`engagements`.`jse_listed` AS `JSE_Listed`,`clients`.`industry` AS `Industry`,`engagements`.`year_of_afs` AS `Period_end_of_AFS`,`engagements`.`date_resigned` AS `Date_Opinion_was_signed`,`clients`.`relationship_owner` AS `Partner`,`users`.`irba` AS `IRBA`,`engagements`.`when_next_irba` AS `Next_IRBA`,`engagements`.`accounting_framework` AS `Accounting_Framework`,`engagements`.`client_turnover` AS `Client_Turnover`,`engagements`.`resigned` AS `Resigned` from ((`clients` join `engagements`) join `users`) where ((`clients`.`ref` = `engagements`.`client`) and (`engagements`.`user` = `users`.`id`) and (`clients`.`engagement_status` = _latin1'1') and (`clients`.`active_status` = _latin1'1'));
